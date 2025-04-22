@@ -54,6 +54,12 @@ const ProjectCard = ({ project, index }: { project: any, index: number }) => (
           src={project.image} 
           alt={project.title} 
           className="w-full h-full object-cover"
+          onError={(e) => {
+            console.error(`Failed to load image for ${project.title}:`, project.image);
+            const target = e.target as HTMLImageElement;
+            target.onerror = null; // Prevent infinite loop
+            target.src = '/placeholder.svg'; // Fallback to placeholder
+          }}
         />
       ) : (
         <div className="text-white font-bold text-xl">
