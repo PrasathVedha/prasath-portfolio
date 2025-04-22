@@ -45,7 +45,6 @@ const Experience = () => {
         </motion.div>
 
         <div className="mt-10 relative max-w-3xl mx-auto">
-          {/* Experience blocks */}
           {experiences.map((exp, index) => (
             <motion.div
               key={exp.id}
@@ -55,12 +54,10 @@ const Experience = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              {/* Date for mobile */}
               <div className="mb-3 px-3 py-1 bg-data-blue/10 text-data-blue rounded-full text-sm inline-block">
                 {exp.date}
               </div>
               
-              {/* Content container */}
               <div className="w-full">
                 <div className="data-card h-full">
                   <h3 className="text-xl font-medium">{exp.title}</h3>
