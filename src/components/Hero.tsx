@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 
@@ -15,14 +14,14 @@ const Hero = () => {
           >
             <h2 className="text-lg text-data-blue font-medium mb-2">Hello, I'm</h2>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              Immanual Joseph Martin
+              Prasath Vedharethinam
             </h1>
             <h2 className="text-2xl md:text-3xl lg:text-4xl text-gray-700 mb-6">
-              Data Analyst
+              Information Technology Student
             </h2>
             <p className="text-gray-600 max-w-lg mb-8">
-              A passionate third-year data analysis student specializing in transforming complex data into 
-              actionable insights. Experienced with Python, SQL, and data visualization tools.
+              A passionate third-year Information Technology student at Lovely Professional University, 
+              with expertise in cloud platforms, programming languages, and web development.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild className="bg-data-blue hover:bg-data-blue/90">
@@ -30,11 +29,6 @@ const Hero = () => {
               </Button>
               <Button asChild variant="outline" className="border-data-blue text-data-blue hover:bg-data-blue/10">
                 <a href="#contact">Contact Me</a>
-              </Button>
-              <Button asChild variant="outline" className="border-data-blue text-data-blue hover:bg-data-blue/10">
-                <a href="https://drive.google.com/drive/folders/1BxIXZFBgSuwdfZrmDXPf7wEThuz1TBps?usp=drive_link" target="_blank" rel="noopener noreferrer">
-                  Download CV
-                </a>
               </Button>
             </div>
           </motion.div>
@@ -60,7 +54,6 @@ const Hero = () => {
           </motion.div>
         </div>
         
-        {/* Scroll down indicator */}
         <motion.div 
           className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
           initial={{ opacity: 0, y: -10 }}

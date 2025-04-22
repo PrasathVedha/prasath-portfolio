@@ -2,43 +2,47 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 
-// Project data from the CV
 const projects = [
   {
     id: 1,
-    title: 'Heart Disease Prediction Web App',
-    date: 'Aug 2024 - Nov 2024',
-    description: 'A machine learning web application that predicts the risk of heart disease based on medical parameters.',
-    technologies: ['Tableau Desktop', 'Excel', 'ML', 'Python', 'Pandas', 'NumPy'],
+    title: 'AWS Storage',
+    date: 'March 2025',
+    description: 'A simple web application that allows users to upload files to secure cloud storage and download them.',
+    technologies: ['AWS S3', 'HTML'],
     points: [
-      'Analyzed medical datasets to identify key patterns and risk factors associated with heart disease',
-      'Cleaned, preprocessed, and visualized data using Pandas, NumPy',
-      'Created interactive dashboards using Tableau to present insights in a user-friendly manner',
-      'Conducted testing and validation to improve the reliability of predictions with an accuracy rate of 95%',
-      'Collaborated with developers to integrate data-driven insights into the web application'
+      'Developed a web application for secure file storage',
+      'Enabled interaction with AWS S3 cloud storage services',
+      'Implemented dynamic web page for data uploading and retrieval'
     ],
-    // Using a reliable placeholder image
-    image: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7',
-    demoLink: '#',
-    repoLink: 'https://github.com/Immanual24'
+    image: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7'
   },
   {
     id: 2,
-    title: 'Nike Sales Dashboard - Data Analysis & Visualization',
-    date: 'Aug 2023 - Sept 2023',
-    description: 'An interactive dashboard that visualizes Nike sales data, identifying trends and generating insights.',
-    technologies: ['Tableau Desktop', 'Excel', 'Python'],
+    title: 'Sudoku Solver',
+    date: 'July 2024',
+    description: 'A Python program using backtracking algorithm to solve Sudoku puzzles.',
+    technologies: ['Python', 'Backtracking Algorithm'],
     points: [
-      'Created an interactive Tableau dashboard to analyze Nike\'s sales data',
-      'Processed 3,360+ transactions to identify key sales trends and insights with an accuracy rate of 99%',
-      'Analyzed product and retailer performance to highlight top-selling items',
-      'Examined sales channel efficiency, emphasizing in-store vs. online sales',
-      'Identified seasonal trends to optimize marketing and inventory planning'
+      'Developed a powerful Python program for solving Sudoku puzzles',
+      'Implemented backtracking algorithm for puzzle solving',
+      'Handles any standard Sudoku puzzle efficiently',
+      'Demonstrated strong algorithmic problem-solving skills'
     ],
-    // Using a reliable placeholder image
-    image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
-    demoLink: '#',
-    repoLink: 'https://github.com/Immanual24'
+    image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b'
+  },
+  {
+    id: 3,
+    title: 'Sports Website',
+    date: 'November 2022',
+    description: 'A dynamic sports e-commerce website showcasing diverse sporting equipment.',
+    technologies: ['HTML', 'CSS'],
+    points: [
+      'Designed and developed a dynamic sports e-commerce website',
+      'Provided smooth navigation and interactive interface',
+      'Optimized for dynamic user experience',
+      'Incorporated responsive design for mobile compatibility'
+    ],
+    image: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211'
   }
 ];
 

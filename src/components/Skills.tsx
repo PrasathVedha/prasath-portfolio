@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, RadialLinearScale, PointElement, LineElement, Filler } from 'chart.js';
 import { Radar } from 'react-chartjs-2';
@@ -7,63 +6,62 @@ import { Card, CardContent } from '@/components/ui/card';
 // Register ChartJS components
 ChartJS.register(ArcElement, Tooltip, Legend, RadialLinearScale, PointElement, LineElement, Filler);
 
-// Skill groups
 const skillGroups = [
   {
     id: 1,
-    title: 'Programming Languages',
-    skills: ['Python', 'SQL', 'C++', 'Java', 'C', 'R']
+    title: 'Languages',
+    skills: ['C++', 'Python']
   },
   {
     id: 2,
-    title: 'Data Analysis & Visualization',
-    skills: ['Pandas', 'NumPy', 'Tableau', 'Excel', 'Data Preprocessing', 'Statistical Analysis']
+    title: 'Frameworks',
+    skills: ['HTML', 'CSS']
   },
   {
     id: 3,
-    title: 'Tools & Platforms',
-    skills: ['MySQL', 'Hadoop', 'Git', 'Jupyter Notebook', 'VS Code']
+    title: 'Tools & Databases',
+    skills: ['MySQL', 'Oracle SQL']
   },
   {
     id: 4,
+    title: 'Cloud Platforms',
+    skills: ['Google Cloud', 'Azure', 'AWS']
+  },
+  {
+    id: 5,
     title: 'Soft Skills',
-    skills: ['Team Player', 'Time Management', 'Adaptability', 'Problem Solving', 'Communication', 'Critical Thinking']
+    skills: ['Multi-Tasking', 'Problem-Solving Skills']
   }
 ];
 
-// Certificate data
 const certificates = [
   {
     id: 1,
-    title: "Supervised Machine Learning: Regression and Classification",
-    issuer: "DeepLearning.AI & Stanford University",
-    date: "Dec 3, 2024",
-    image: "/lovable-uploads/0b556142-b9d1-4989-a6dd-70c027272bb7.png",
-    verifyLink: "https://coursera.org/verify/ZPRT0LCM4WX4"
+    title: "Cyber Security and Privacy",
+    issuer: "NPTEL",
+    date: "October 2024",
+    image: "/lovable-uploads/0b556142-b9d1-4989-a6dd-70c027272bb7.png"
   },
   {
     id: 2,
-    title: "Excel Skills for Business Specialization",
-    issuer: "Macquarie University",
-    date: "May 2, 2024",
-    image: "/lovable-uploads/4bb8515d-6545-468b-a67d-343b7aa877ba.png",
-    verifyLink: "https://coursera.org/verify/specialization/66ZSVQSSSZ8Q"
+    title: "Data Structures and Algorithms",
+    issuer: "Geek for Geek",
+    date: "June 2024",
+    image: "/lovable-uploads/4bb8515d-6545-468b-a67d-343b7aa877ba.png"
   },
   {
     id: 3,
-    title: "Programming in C++: A Hands-on Introduction",
-    issuer: "Codio",
-    date: "May 13, 2024",
-    image: "/lovable-uploads/d1996e82-09a4-43ea-9dc3-dcddd12e5175.png",
-    verifyLink: "https://coursera.org/verify/specialization/GVY2649JX7RN"
+    title: "The Bits and Bytes of Computer Networking",
+    issuer: "Coursera",
+    date: "February 2024",
+    image: "/lovable-uploads/d1996e82-09a4-43ea-9dc3-dcddd12e5175.png"
   },
   {
-    id: 4, 
-    title: "Data Analysis with Tableau",
-    issuer: "Tableau Learning Partner",
-    date: "Nov 19, 2024",
-    image: "/lovable-uploads/ec8cd860-5b4e-4ebc-8248-a84350888382.png",
-    verifyLink: "https://coursera.org/verify/I5T228DBDTWO"
+    id: 4,
+    title: "GenAI for Everyone",
+    issuer: "Coursera",
+    date: "February 2024",
+    image: "/lovable-uploads/ec8cd860-5b4e-4ebc-8248-a84350888382.png"
   }
 ];
 
@@ -143,14 +141,6 @@ const Skills = () => {
                     <h4 className="font-medium text-lg mb-2">{cert.title}</h4>
                     <p className="text-gray-600 mb-1">{cert.issuer}</p>
                     <p className="text-gray-500 text-sm mb-4">{cert.date}</p>
-                    <a 
-                      href={cert.verifyLink} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-data-blue hover:underline text-sm inline-block"
-                    >
-                      Verify Certificate
-                    </a>
                   </CardContent>
                 </Card>
               </motion.div>

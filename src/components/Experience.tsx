@@ -4,18 +4,27 @@ import { motion } from 'framer-motion';
 const experiences = [
   {
     id: 1,
-    title: 'Geeks for Geeks Summer Training Course',
-    company: 'GeeksforGeeks',
-    date: 'June 2024 - July 2024',
-    description: 'Intensive training on data structures and algorithms, with practical application in real-world problems.',
-    responsibilities: [
-      'Gained hands-on experience in Data Structures & Algorithms',
-      'Worked on real-world projects to apply theoretical knowledge in practical scenarios',
-      'Followed best coding practices and optimized performance for better efficiency',
-      'Presented the project, demonstrating practical application of learned concepts',
-      'Successfully completed assessments and earned certification from GeeksforGeeks'
-    ],
-    certificate: '/lovable-uploads/1c241336-80ee-4eac-bdb3-7a8064ef904e.png'
+    title: 'Bachelor of Technology – Information Technology',
+    company: 'Lovely Professional University',
+    location: 'Punjab, India',
+    date: 'Since August 2022',
+    description: 'Currently pursuing B.Tech in Information Technology.',
+  },
+  {
+    id: 2,
+    title: 'Senior Secondary Education',
+    company: 'Paavai Vidhyashram CBSE School',
+    location: 'Tamil Nadu, India',
+    date: 'April 2021 - March 2022',
+    description: 'Completed senior secondary education with 90.4%',
+  },
+  {
+    id: 3,
+    title: 'Secondary Education',
+    company: 'Paavai Vidhyashram CBSE School',
+    location: 'Tamil Nadu, India',
+    date: 'April 2019 - March 2020',
+    description: 'Completed secondary education with 93.4%',
   }
 ];
 
