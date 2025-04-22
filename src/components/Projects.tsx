@@ -17,6 +17,7 @@ const projects = [
       'Conducted testing and validation to improve the reliability of predictions with an accuracy rate of 95%',
       'Collaborated with developers to integrate data-driven insights into the web application'
     ],
+    image: '/lovable-uploads/a9191c61-b7c8-483e-8b6e-dd0277153de6.png',
     demoLink: '#',
     repoLink: 'https://github.com/Immanual24'
   },
@@ -33,6 +34,7 @@ const projects = [
       'Examined sales channel efficiency, emphasizing in-store vs. online sales',
       'Identified seasonal trends to optimize marketing and inventory planning'
     ],
+    image: '/lovable-uploads/34b22f79-87a4-4edd-a4e5-31fde66ff943.png',
     demoLink: '#',
     repoLink: 'https://github.com/Immanual24'
   }
@@ -46,10 +48,18 @@ const ProjectCard = ({ project, index }: { project: any, index: number }) => (
     viewport={{ once: true }}
     transition={{ duration: 0.5, delay: index * 0.1 }}
   >
-    <div className="h-48 bg-gradient-to-r from-data-blue to-data-purple flex items-center justify-center">
-      <div className="text-white font-bold text-xl">
-        {project.title.split(' ').slice(0, 2).join(' ')}
-      </div>
+    <div className="h-48 bg-gradient-to-r from-data-blue to-data-purple flex items-center justify-center relative overflow-hidden">
+      {project.image ? (
+        <img 
+          src={project.image} 
+          alt={project.title} 
+          className="w-full h-full object-cover"
+        />
+      ) : (
+        <div className="text-white font-bold text-xl">
+          {project.title.split(' ').slice(0, 2).join(' ')}
+        </div>
+      )}
     </div>
     
     <div className="p-6">
