@@ -15,30 +15,6 @@ const experiences = [
       'Presented the project, demonstrating practical application of learned concepts',
       'Successfully completed assessments and earned certification from GeeksforGeeks'
     ]
-  },
-  {
-    id: 1,
-    title: 'Bachelor of Technology – Information Technology',
-    company: 'Lovely Professional University',
-    location: 'Punjab, India',
-    date: 'Since August 2022',
-    description: 'Currently pursuing B.Tech in Information Technology.',
-  },
-  {
-    id: 2,
-    title: 'Senior Secondary Education',
-    company: 'Paavai Vidhyashram CBSE School',
-    location: 'Tamil Nadu, India',
-    date: 'April 2021 - March 2022',
-    description: 'Completed senior secondary education with 90.4%',
-  },
-  {
-    id: 3,
-    title: 'Secondary Education',
-    company: 'Paavai Vidhyashram CBSE School',
-    location: 'Tamil Nadu, India',
-    date: 'April 2019 - March 2020',
-    description: 'Completed secondary education with 93.4%',
   }
 ];
 
@@ -111,4 +87,3 @@ const Experience = () => {
 };
 
 export default Experience;
-
