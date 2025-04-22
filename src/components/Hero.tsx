@@ -41,7 +41,7 @@ const Hero = () => {
         }}>
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden bg-white border-4 border-white shadow-xl">
               {/* Actual profile image */}
-              <img src="/lovable-uploads/c2705f07-4ab7-4c1a-aec5-dbd3c11c89e8.png" alt="Immanual Joseph Martin" className="w-full h-full object-cover" />
+              <img alt="Immanual Joseph Martin" className="w-full h-full object-cover" src="/lovable-uploads/9a478737-4580-4484-813a-14f2c9af2ff9.jpg" />
               
               {/* Decorative elements */}
               <div className="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-data-peach"></div>
