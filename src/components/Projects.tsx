@@ -13,7 +13,7 @@ const projects = [
       'Enabled interaction with AWS S3 cloud storage services',
       'Implemented dynamic web page for data uploading and retrieval'
     ],
-    image: 'https://images.unsplash.com/photo-1501854140801-50d01698950b'
+    image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05' // White foggy mountain summit (cloud-like)
   },
   {
     id: 2,
