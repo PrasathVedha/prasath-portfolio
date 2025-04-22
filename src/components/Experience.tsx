@@ -4,6 +4,21 @@ import { motion } from 'framer-motion';
 const experiences = [
   {
     id: 1,
+    title: 'Data Structures and Algorithms Course',
+    company: 'GeeksforGeeks',
+    date: '2024',
+    description: '16-week intensive course on Data Structures and Algorithms, covering advanced programming topics and problem-solving techniques.',
+    responsibilities: [
+      'Successfully completed the 16-week self-paced online course',
+      'Mastered fundamental and advanced data structures: arrays, linked lists, trees, graphs, and hash tables',
+      'Developed algorithm analysis skills and time/space complexity optimization techniques',
+      'Built practical projects implementing data structures in real-world scenarios',
+      'Received certification from Mr. Sandeep Jain, Founder & CEO of GeeksforGeeks'
+    ],
+    certificate: '/lovable-uploads/1c241336-80ee-4eac-bdb3-7a8064ef904e.png'
+  },
+  {
+    id: 2,
     title: 'Geeks for Geeks Summer Training Course',
     company: 'GeeksforGeeks',
     date: 'June 2024 - July 2024',
@@ -17,7 +32,7 @@ const experiences = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     title: 'Community Development Project',
     company: 'Thrissur Municipal Association',
     date: '2023',
@@ -84,6 +99,16 @@ const Experience = () => {
                   <h3 className="text-xl font-medium">{exp.title}</h3>
                   <p className="text-data-blue font-medium mb-3">{exp.company}</p>
                   <p className="text-gray-600 mb-4">{exp.description}</p>
+                  
+                  {exp.certificate && (
+                    <div className="mb-4 p-2 border border-gray-200 rounded-md bg-white">
+                      <img 
+                        src={exp.certificate} 
+                        alt={`${exp.title} Certificate`} 
+                        className="w-full h-auto rounded-md"
+                      />
+                    </div>
+                  )}
                   
                   <h4 className="text-sm font-medium text-gray-700 mb-2">Key Responsibilities:</h4>
                   <ul className="list-disc pl-5 space-y-1 text-gray-600">

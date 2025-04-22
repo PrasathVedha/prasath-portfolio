@@ -31,6 +31,11 @@ const Hero = () => {
               <Button asChild variant="outline" className="border-data-blue text-data-blue hover:bg-data-blue/10">
                 <a href="#contact">Contact Me</a>
               </Button>
+              <Button asChild variant="outline" className="border-data-blue text-data-blue hover:bg-data-blue/10">
+                <a href="https://drive.google.com/drive/folders/1BxIXZFBgSuwdfZrmDXPf7wEThuz1TBps?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                  Download CV
+                </a>
+              </Button>
             </div>
           </motion.div>
           

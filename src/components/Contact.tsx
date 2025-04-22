@@ -227,7 +227,7 @@ const Contact = () => {
             <div className="data-card">
               <h3 className="text-xl font-medium mb-6">Connect With Me</h3>
               
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 mb-6">
                 <a 
                   href="https://www.linkedin.com/in/immanual-joseph-martin" 
                   target="_blank" 
@@ -296,6 +296,19 @@ const Contact = () => {
                   </svg>
                 </a>
               </div>
+              
+              <Button 
+                asChild 
+                className="w-full bg-green-600 hover:bg-green-700"
+              >
+                <a 
+                  href="https://drive.google.com/drive/folders/1BxIXZFBgSuwdfZrmDXPf7wEThuz1TBps?usp=drive_link" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  Download CV
+                </a>
+              </Button>
               
               <div className="mt-6">
                 <p className="text-gray-600">
