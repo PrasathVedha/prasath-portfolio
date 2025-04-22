@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -31,7 +30,7 @@ const Navbar = () => {
           to="/" 
           className="text-xl font-display font-semibold text-primary"
         >
-          Immanual<span className="text-data-blue">.dev</span>
+          Portfolio<span className="text-data-blue">.dev</span>
         </Link>
 
         {/* Desktop Navigation */}
