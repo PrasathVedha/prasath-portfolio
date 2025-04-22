@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 
@@ -14,7 +13,7 @@ const projects = [
       'Enabled interaction with AWS S3 cloud storage services',
       'Implemented dynamic web page for data uploading and retrieval'
     ],
-    image: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7'
+    image: 'https://images.unsplash.com/photo-1501854140801-50d01698950b'
   },
   {
     id: 2,
