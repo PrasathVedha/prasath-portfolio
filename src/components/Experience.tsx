@@ -3,6 +3,20 @@ import { motion } from 'framer-motion';
 
 const experiences = [
   {
+    id: 0,
+    date: 'June 2024 - July 2024',
+    title: 'Geeks for Geeks Summer Training Course',
+    company: 'GeeksforGeeks',
+    description: 'Intensive training on data structures and algorithms, with practical application in real-world problems.\n\nGeeks for Geeks Summer Training Course Certificate',
+    responsibilities: [
+      'Gained hands-on experience in Data Structures & Algorithms',
+      'Worked on real-world projects to apply theoretical knowledge in practical scenarios',
+      'Followed best coding practices and optimized performance for better efficiency',
+      'Presented the project, demonstrating practical application of learned concepts',
+      'Successfully completed assessments and earned certification from GeeksforGeeks'
+    ]
+  },
+  {
     id: 1,
     title: 'Bachelor of Technology – Information Technology',
     company: 'Lovely Professional University',
@@ -62,7 +76,17 @@ const Experience = () => {
                 <div className="data-card h-full">
                   <h3 className="text-xl font-medium">{exp.title}</h3>
                   <p className="text-data-blue font-medium mb-3">{exp.company}</p>
-                  <p className="text-gray-600 mb-4">{exp.description}</p>
+                  <p className="text-gray-600 mb-4 whitespace-pre-line">{exp.description}</p>
+                  {exp.responsibilities && (
+                    <>
+                      <h4 className="text-sm font-medium text-gray-700 mb-2">Key Responsibilities:</h4>
+                      <ul className="list-disc pl-5 space-y-1 text-gray-600 mb-4">
+                        {exp.responsibilities.map((point: string, i: number) => (
+                          <li key={i} className="text-sm">{point}</li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
                 </div>
               </div>
             </motion.div>
@@ -87,3 +111,4 @@ const Experience = () => {
 };
 
 export default Experience;
+
