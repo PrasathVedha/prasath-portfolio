@@ -15,7 +15,7 @@ const About = () => {
           <div className="section-subtitle">Get to know me better</div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
           <motion.div
             className="data-card"
             initial={{ opacity: 0, y: 20 }}
@@ -76,37 +76,6 @@ const About = () => {
               I analyze complex datasets, create interactive visualizations, and build predictive models. 
               I transform raw data into valuable insights that drive decision-making.
               My approach combines technical skills with effective communication.
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="data-card"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
-            <div className="h-12 w-12 bg-data-peach/30 rounded-md flex items-center justify-center mb-4">
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                width="24" 
-                height="24" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="2" 
-                strokeLinecap="round" 
-                strokeLinejoin="round"
-                className="text-orange-500"
-              >
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-medium mb-2">My Vision</h3>
-            <p className="text-gray-600">
-              I aim to become a leading data analyst who creates impactful solutions that make a difference.
-              I believe in the power of data-driven decision making and continuous learning.
-              My goal is to help organizations leverage their data for better outcomes.
             </p>
           </motion.div>
         </div>

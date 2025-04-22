@@ -16,19 +16,6 @@ const experiences = [
       'Successfully completed assessments and earned certification from GeeksforGeeks'
     ],
     certificate: '/lovable-uploads/1c241336-80ee-4eac-bdb3-7a8064ef904e.png'
-  },
-  {
-    id: 2,
-    title: 'Community Development Project',
-    company: 'Thrissur Municipal Association',
-    date: '2023',
-    description: 'Led a community initiative focused on environmental awareness and waste management.',
-    responsibilities: [
-      'Led a garbage management awareness campaign with Thrissur Municipal Association',
-      'Worked with Self-Help Groups (SHGs) to educate residents on waste segregation and recycling',
-      'Engaged local communities in eco-friendly initiatives like composting and reducing plastic waste',
-      'Collaborated with municipal officials to improve waste management efforts'
-    ]
   }
 ];
 
@@ -48,40 +35,25 @@ const Experience = () => {
           </div>
         </motion.div>
 
-        <div className="mt-10 relative">
-          {/* Timeline connector */}
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-data-blue/30 transform md:translate-x-[-0.5px] hidden md:block"></div>
-          
+        <div className="mt-10 relative max-w-3xl mx-auto">
           {/* Experience blocks */}
           {experiences.map((exp, index) => (
             <motion.div
               key={exp.id}
-              className={`mb-12 md:mb-0 relative md:flex ${
-                index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-              }`}
+              className="mb-12 relative"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              {/* Timeline dot */}
-              <div className="absolute top-0 left-[-8px] md:left-auto md:top-6 md:left-1/2 md:transform md:translate-x-[-50%] h-4 w-4 rounded-full bg-data-blue z-10 hidden md:block"></div>
-              
               {/* Date for mobile */}
-              <div className="md:hidden mb-3 px-3 py-1 bg-data-blue/10 text-data-blue rounded-full text-sm inline-block">
+              <div className="mb-3 px-3 py-1 bg-data-blue/10 text-data-blue rounded-full text-sm inline-block">
                 {exp.date}
               </div>
               
               {/* Content container */}
-              <div className={`w-full md:w-1/2 ${
-                index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'
-              }`}>
+              <div className="w-full">
                 <div className="data-card h-full">
-                  {/* Date for desktop */}
-                  <div className="hidden md:block mb-2 px-3 py-1 bg-data-blue/10 text-data-blue rounded-full text-sm inline-block">
-                    {exp.date}
-                  </div>
-                  
                   <h3 className="text-xl font-medium">{exp.title}</h3>
                   <p className="text-data-blue font-medium mb-3">{exp.company}</p>
                   <p className="text-gray-600 mb-4">{exp.description}</p>
@@ -104,9 +76,6 @@ const Experience = () => {
                   </ul>
                 </div>
               </div>
-              
-              {/* Empty div for timeline layout */}
-              <div className="hidden md:block w-1/2"></div>
             </motion.div>
           ))}
         </div>

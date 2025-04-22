@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, RadialLinearScale, PointElement, LineElement, Filler } from 'chart.js';
 import { Radar } from 'react-chartjs-2';
@@ -30,49 +31,7 @@ const skillGroups = [
   }
 ];
 
-// Radar chart data
-const radarData = {
-  labels: ['Python', 'SQL', 'Pandas/NumPy', 'Tableau', 'Excel', 'Statistics'],
-  datasets: [
-    {
-      label: 'Skill Proficiency',
-      data: [90, 85, 88, 80, 85, 75],
-      backgroundColor: 'rgba(51, 195, 240, 0.2)',
-      borderColor: 'rgba(51, 195, 240, 1)',
-      borderWidth: 2,
-      pointBackgroundColor: 'rgba(51, 195, 240, 1)',
-      pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(51, 195, 240, 1)'
-    }
-  ]
-};
-
-// Radar chart options
-const radarOptions = {
-  scales: {
-    r: {
-      angleLines: {
-        display: true,
-        color: 'rgba(0, 0, 0, 0.1)'
-      },
-      suggestedMin: 0,
-      suggestedMax: 100,
-      ticks: {
-        stepSize: 20,
-        backdropColor: 'transparent'
-      }
-    }
-  },
-  plugins: {
-    legend: {
-      display: false
-    }
-  },
-  maintainAspectRatio: false
-};
-
-// Certificate data - reordered as requested
+// Certificate data
 const certificates = [
   {
     id: 1,
@@ -124,24 +83,8 @@ const Skills = () => {
           </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
-          <motion.div
-            className="data-card h-full"
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            <h3 className="text-xl font-medium mb-6">Technical Proficiency</h3>
-            <div className="h-80">
-              <Radar data={radarData} options={radarOptions} />
-            </div>
-            <div className="mt-6 text-center text-gray-600">
-              <p>Based on projects, coursework, and self-assessment</p>
-            </div>
-          </motion.div>
-
-          <div className="space-y-6">
+        <div className="mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {skillGroups.map((group, groupIndex) => (
               <motion.div
                 key={group.id}
