@@ -4,21 +4,6 @@ import { motion } from 'framer-motion';
 const experiences = [
   {
     id: 1,
-    title: 'Data Structures and Algorithms Course',
-    company: 'GeeksforGeeks',
-    date: '2024',
-    description: '16-week intensive course on Data Structures and Algorithms, covering advanced programming topics and problem-solving techniques.',
-    responsibilities: [
-      'Successfully completed the 16-week self-paced online course',
-      'Mastered fundamental and advanced data structures: arrays, linked lists, trees, graphs, and hash tables',
-      'Developed algorithm analysis skills and time/space complexity optimization techniques',
-      'Built practical projects implementing data structures in real-world scenarios',
-      'Received certification from Mr. Sandeep Jain, Founder & CEO of GeeksforGeeks'
-    ],
-    certificate: '/lovable-uploads/1c241336-80ee-4eac-bdb3-7a8064ef904e.png'
-  },
-  {
-    id: 2,
     title: 'Geeks for Geeks Summer Training Course',
     company: 'GeeksforGeeks',
     date: 'June 2024 - July 2024',
@@ -29,10 +14,11 @@ const experiences = [
       'Followed best coding practices and optimized performance for better efficiency',
       'Presented the project, demonstrating practical application of learned concepts',
       'Successfully completed assessments and earned certification from GeeksforGeeks'
-    ]
+    ],
+    certificate: '/lovable-uploads/1c241336-80ee-4eac-bdb3-7a8064ef904e.png'
   },
   {
-    id: 3,
+    id: 2,
     title: 'Community Development Project',
     company: 'Thrissur Municipal Association',
     date: '2023',

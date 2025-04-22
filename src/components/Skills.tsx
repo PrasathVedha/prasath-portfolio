@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, RadialLinearScale, PointElement, LineElement, Filler } from 'chart.js';
 import { Radar } from 'react-chartjs-2';
@@ -72,7 +73,7 @@ const radarOptions = {
   maintainAspectRatio: false
 };
 
-// Certificate data - reordered as per user's request
+// Certificate data - reordered as requested
 const certificates = [
   {
     id: 1,
@@ -84,6 +85,14 @@ const certificates = [
   },
   {
     id: 2,
+    title: "Excel Skills for Business Specialization",
+    issuer: "Macquarie University",
+    date: "May 2, 2024",
+    image: "/lovable-uploads/4bb8515d-6545-468b-a67d-343b7aa877ba.png",
+    verifyLink: "https://coursera.org/verify/specialization/66ZSVQSSSZ8Q"
+  },
+  {
+    id: 3,
     title: "Programming in C++: A Hands-on Introduction",
     issuer: "Codio",
     date: "May 13, 2024",
@@ -91,20 +100,12 @@ const certificates = [
     verifyLink: "https://coursera.org/verify/specialization/GVY2649JX7RN"
   },
   {
-    id: 3, 
+    id: 4, 
     title: "Data Analysis with Tableau",
     issuer: "Tableau Learning Partner",
     date: "Nov 19, 2024",
     image: "/lovable-uploads/ec8cd860-5b4e-4ebc-8248-a84350888382.png",
     verifyLink: "https://coursera.org/verify/I5T228DBDTWO"
-  },
-  {
-    id: 4,
-    title: "Excel Skills for Business Specialization",
-    issuer: "Macquarie University",
-    date: "May 2, 2024",
-    image: "/lovable-uploads/4bb8515d-6545-468b-a67d-343b7aa877ba.png",
-    verifyLink: "https://coursera.org/verify/specialization/66ZSVQSSSZ8Q"
   }
 ];
 
