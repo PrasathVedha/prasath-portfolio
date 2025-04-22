@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, RadialLinearScale, PointElement, LineElement, Filler } from 'chart.js';
 import { Radar } from 'react-chartjs-2';
+import { Card, CardContent } from '@/components/ui/card';
 
 // Register ChartJS components
 ChartJS.register(ArcElement, Tooltip, Legend, RadialLinearScale, PointElement, LineElement, Filler);
@@ -72,6 +73,42 @@ const radarOptions = {
   maintainAspectRatio: false
 };
 
+// Certificate data
+const certificates = [
+  {
+    id: 1,
+    title: "Supervised Machine Learning: Regression and Classification",
+    issuer: "DeepLearning.AI & Stanford University",
+    date: "Dec 3, 2024",
+    image: "/lovable-uploads/0b556142-b9d1-4989-a6dd-70c027272bb7.png",
+    verifyLink: "https://coursera.org/verify/ZPRT0LCM4WX4"
+  },
+  {
+    id: 2,
+    title: "Data Analysis with Tableau",
+    issuer: "Tableau Learning Partner",
+    date: "Nov 19, 2024",
+    image: "/lovable-uploads/ec8cd860-5b4e-4ebc-8248-a84350888382.png",
+    verifyLink: "https://coursera.org/verify/I5T228DBDTWO"
+  },
+  {
+    id: 3,
+    title: "Excel Skills for Business Specialization",
+    issuer: "Macquarie University",
+    date: "May 2, 2024",
+    image: "/lovable-uploads/4bb8515d-6545-468b-a67d-343b7aa877ba.png",
+    verifyLink: "https://coursera.org/verify/specialization/66ZSVQSSSZ8Q"
+  },
+  {
+    id: 4,
+    title: "Programming in C++: A Hands-on Introduction",
+    issuer: "Codio",
+    date: "May 13, 2024",
+    image: "/lovable-uploads/d1996e82-09a4-43ea-9dc3-dcddd12e5175.png",
+    verifyLink: "https://coursera.org/verify/specialization/GVY2649JX7RN"
+  }
+];
+
 const Skills = () => {
   return (
     <section id="skills" className="py-20 bg-white">
@@ -136,30 +173,46 @@ const Skills = () => {
         </div>
 
         <motion.div
-          className="mt-12 p-6 rounded-lg bg-data-lightGray border border-gray-100"
+          className="mt-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <h3 className="text-xl font-medium mb-4">Certificates</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="p-4 bg-white rounded-md shadow-sm">
-              <h4 className="font-medium">Data Analysis with Tableau</h4>
-              <p className="text-gray-500 text-sm">Coursera - April 2024</p>
-            </div>
-            <div className="p-4 bg-white rounded-md shadow-sm">
-              <h4 className="font-medium">Excel skills for Data Analytics and Visualization</h4>
-              <p className="text-gray-500 text-sm">Coursera - May 2024</p>
-            </div>
-            <div className="p-4 bg-white rounded-md shadow-sm">
-              <h4 className="font-medium">Supervised Machine Learning: Regression and Classification</h4>
-              <p className="text-gray-500 text-sm">Coursera - Aug 2024</p>
-            </div>
-            <div className="p-4 bg-white rounded-md shadow-sm">
-              <h4 className="font-medium">C++ Basics: Selection and Iteration</h4>
-              <p className="text-gray-500 text-sm">Coursera - Dec 2024</p>
-            </div>
+          <h3 className="text-2xl font-medium mb-8 text-center">Certifications</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {certificates.map((cert, index) => (
+              <motion.div
+                key={cert.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
+              >
+                <Card className="overflow-hidden h-full hover:shadow-lg transition-shadow duration-300">
+                  <div className="aspect-video overflow-hidden bg-gray-100 flex items-center justify-center">
+                    <img 
+                      src={cert.image} 
+                      alt={cert.title}
+                      className="w-full h-full object-contain p-4"
+                    />
+                  </div>
+                  <CardContent className="p-6">
+                    <h4 className="font-medium text-lg mb-2">{cert.title}</h4>
+                    <p className="text-gray-600 mb-1">{cert.issuer}</p>
+                    <p className="text-gray-500 text-sm mb-4">{cert.date}</p>
+                    <a 
+                      href={cert.verifyLink} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-data-blue hover:underline text-sm inline-block"
+                    >
+                      Verify Certificate
+                    </a>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
       </div>

@@ -40,11 +40,13 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden bg-data-lightBlue border-4 border-white shadow-xl">
-              {/* Profile image placeholder - replace with your own image */}
-              <div className="absolute inset-0 flex items-center justify-center bg-data-blue/10">
-                <span className="text-5xl font-bold text-data-blue">I.J.M</span>
-              </div>
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden bg-white border-4 border-white shadow-xl">
+              {/* Actual profile image */}
+              <img 
+                src="/lovable-uploads/c2705f07-4ab7-4c1a-aec5-dbd3c11c89e8.png" 
+                alt="Immanual Joseph Martin" 
+                className="w-full h-full object-cover"
+              />
               
               {/* Decorative elements */}
               <div className="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-data-peach"></div>
