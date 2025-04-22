@@ -17,7 +17,8 @@ const projects = [
       'Conducted testing and validation to improve the reliability of predictions with an accuracy rate of 95%',
       'Collaborated with developers to integrate data-driven insights into the web application'
     ],
-    image: '/lovable-uploads/a9191c61-b7c8-483e-8b6e-dd0277153de6.png',
+    // Using a reliable placeholder image
+    image: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7',
     demoLink: '#',
     repoLink: 'https://github.com/Immanual24'
   },
@@ -34,7 +35,8 @@ const projects = [
       'Examined sales channel efficiency, emphasizing in-store vs. online sales',
       'Identified seasonal trends to optimize marketing and inventory planning'
     ],
-    image: '/lovable-uploads/34b22f79-87a4-4edd-a4e5-31fde66ff943.png',
+    // Using a reliable placeholder image
+    image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
     demoLink: '#',
     repoLink: 'https://github.com/Immanual24'
   }
@@ -58,7 +60,7 @@ const ProjectCard = ({ project, index }: { project: any, index: number }) => (
             console.error(`Failed to load image for ${project.title}:`, project.image);
             const target = e.target as HTMLImageElement;
             target.onerror = null; // Prevent infinite loop
-            target.src = '/placeholder.svg'; // Fallback to placeholder
+            target.src = 'https://images.unsplash.com/photo-1518770660439-4636190af475'; // Alternative fallback
           }}
         />
       ) : (
