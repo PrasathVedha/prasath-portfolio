@@ -1,6 +1,37 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 
+const AnimatedCloud = () => (
+  <svg
+    viewBox="0 0 140 80"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="w-full h-full object-contain"
+  >
+    <g>
+      <motion.ellipse
+        cx="70"
+        cy="45"
+        rx="35"
+        ry="18"
+        fill="#fff"
+        initial={{ x: -30 }}
+        animate={{ x: [ -30, 30, -30 ] }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          repeatType: "loop",
+          ease: "easeInOut"
+        }}
+        style={{ filter: 'drop-shadow(0px 6px 8px rgba(120,120,140,0.08))' }}
+      />
+      <ellipse cx="53" cy="38" rx="18" ry="13" fill="#fff" />
+      <ellipse cx="89" cy="40" rx="15" ry="10" fill="#fff" />
+      <ellipse cx="77" cy="33" rx="11" ry="7" fill="#fff" />
+    </g>
+  </svg>
+);
+
 const projects = [
   {
     id: 1,
@@ -13,7 +44,7 @@ const projects = [
       'Enabled interaction with AWS S3 cloud storage services',
       'Implemented dynamic web page for data uploading and retrieval'
     ],
-    image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05' // White foggy mountain summit (cloud-like)
+    image: <AnimatedCloud />
   },
   {
     id: 2,
@@ -54,7 +85,7 @@ const ProjectCard = ({ project, index }: { project: any, index: number }) => (
     transition={{ duration: 0.5, delay: index * 0.1 }}
   >
     <div className="h-48 bg-gradient-to-r from-data-blue to-data-purple flex items-center justify-center relative overflow-hidden">
-      {project.image ? (
+      {typeof project.image === 'string' ? (
         <img 
           src={project.image} 
           alt={project.title} 
@@ -67,9 +98,7 @@ const ProjectCard = ({ project, index }: { project: any, index: number }) => (
           }}
         />
       ) : (
-        <div className="text-white font-bold text-xl">
-          {project.title.split(' ').slice(0, 2).join(' ')}
-        </div>
+        project.image // Render JSX animated SVG if provided
       )}
     </div>
     
