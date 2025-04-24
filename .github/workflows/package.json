@@ -1,0 +1,5 @@
+"scripts": {
+  "build": "react-scripts build"  // For Create React App
+  // OR
+  "build": "vite build"          // For Vite-based React
+}
